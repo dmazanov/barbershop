@@ -1,0 +1,309 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	/* background: #000000 url('../index1440x770.jpg')no-repeat 50% 3px; */
+	background: #000000 url('../shop1423.jpg')no-repeat 50% 3px;
+}
+
+.clearfix::after {
+	content: '';
+	display: table;
+	clear:both;
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main-header { margin-bottom: 60px; }
+
+.main-navigation {
+	float: left;
+	width: 780px;
+	min-height: 70px;
+}
+
+.main-navigation ul {
+	list-style: none;
+}
+
+.main-navigation li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.user-block {
+	float: right;
+	width: 140px;
+	min-height: 70px;
+}
+
+.index-logo {
+	width: 368px;
+	height:204px;
+	margin: 0 auto 25px;
+}
+
+.features {
+	margin-bottom: 80px;
+}
+
+.features-item {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	min-height: 175px;
+}
+
+.features-item:last-child {
+	margin-right: 0;
+}
+
+.index-content {
+	padding: 50px 80px;
+	margin-bottom: 35px;
+}
+
+.index-content-left {
+	float: left;
+	width: 380px;
+	min-height: 330px;
+}
+
+.index-content-right {
+	float: right;
+	width: 300px;
+	min-height: 330px;
+}
+
+.main-footer {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	margin-top: 65px;
+}
+
+.footer-contacts {
+	float: left;
+	width: 320px;
+	margin-right: 60px;
+}
+
+.footer-social {
+	float: left;
+	width: 180px;
+}
+
+.footer-copyright {
+	float:right;
+	width: 180px;
+}
+
+/*---- Page Item ----*/
+.page-logo {
+	float: left;
+	width: 130px;
+	padding-top: 26px;
+	padding-left: 18px;
+	padding-bottom: 16px;
+}
+
+.page .main-navigation {
+	width: 600px;
+}
+
+.breadcrumbs {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 50px;
+}
+
+.breadcrumbs li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.product-gallery {
+	float: left;
+	width: 460px;
+}
+
+.product-thumbnail {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 20px;
+}
+
+.product-thumbnail li {
+	display: inline-block;
+	width: 140px;
+	vertical-align: top;
+}
+
+.product-description {
+	float: right;
+	width: 390px;
+	padding-left: 10px;
+}
+
+.product-info {
+	margin-bottom: 30px;
+}
+
+.product-status {
+	float: left;
+	width: 170px;
+}
+
+.product-artikul {
+	float: right;
+	width: 160px;
+}
+
+.product-description p {
+	margin-bottom: 28px;
+}
+
+.product-cost { margin-bottom: 60px; }
+
+.product-price {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.product-cost .btn {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.product-description-title {
+	margin-bottom: 30px;
+}
+
+.page .main-footer {
+	padding-top: 60px;
+	padding-bottom: 40px;
+	margin-top: 45px;
+}
+
+
+/*----- Page Price ----- */
+.promo-slogan {
+	display: block;
+	margin-bottom: 60px;
+}
+
+.row {
+	margin-bottom: 60px;
+}
+
+.promo-content {
+	float: left;
+	width: 460px;
+}
+
+.price-content {
+	float: right;
+	width: 460px;
+
+	/*используем для построения сетки*/
+	min-height: 250px;
+}
+
+.about-us {
+	padding-bottom: 34px;
+
+	/*используем для построения сетки*/
+	min-height: 150px;
+}
+
+/*----- Page Shop ------*/
+.sidebar {
+	float: left;
+	width: 220px;
+	padding-right: 10px;
+}
+
+.products-content {
+	float: right;
+	width: 700px;
+}
+
+.products-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
+
+	min-height: 620px; 
+
+}
+
+.products-card {
+	display: inline-block;
+	width: 220px;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+.products-card img {
+
+}
+
+.products-title {
+	padding-top: 18px;
+	padding-bottom: 12px;
+}
+
+.products-category,
+.products-name { display: block; }
+
+.products-cost .product-price{
+
+}
+
+.product-page-navigation {
+	clear: both;
+}
+
+.pagination {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	min-height: 43px;
+}
+
+.pagination li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+
+
+
+/* Размечаем сетку */
+
+body > * {
+	background: rgba(0, 128, 0, .2);
+	box-shadow: 0 0 0 3px green;
+}
+
+
+
+body > * > * {  /* Центровщики и колонки */
+	background: rgba(255, 45, 82, .2);
+	box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+
+body > * > * > * {
+	background: rgba(234, 255, 45, .2);
+	box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}

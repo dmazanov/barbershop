@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Барбершоп "Бородинский" - Магазин</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body class="page">
 	<header class="main-header">
-		<div class="container">
+		<div class="container clearfix">
 			<div class="page-logo">
 				<img src="img/page-logo.png" alt='Барбершоп "Бородинский"'>
 			</div>
@@ -14,8 +15,8 @@
 				<ul>
 					<li><a href="#">Информация</a></li>
 					<li><a href="#">Новости</a></li>
-					<li><a href="#">Прайс-лист</a></li>
-					<li><a href="#">Магазин</a></li>
+					<li><a href="price.html">Прайс-лист</a></li>
+					<li><a href="shop.html">Магазин</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
 			</nav>
@@ -24,85 +25,116 @@
 			</div>
 		</div>
 	</header>
-	<main class="container">
+	<main class="container clearfix">
 		<h1 class="main-title">Средства для ухода</h1>
 		<ul class="breadcrumbs">
 			<li><a href="#">ГЛАВНАЯ </a></li>
 			<li><a href="#">Магазин</a></li>
-			<li><a href="#">Средства для ухода</a></li>
+			<li><span>Средства для ухода</span></li>
 		</ul>
 		<div class="sidebar">
 			<form action="" method="get">
-				<h2 class="filter">Производители:</h2>
-				<p><input type="checkbox" name="manufacturers" id="checkbox-1" checked>
-					<label for="checkbox-1">Baxter of California</label></p>
-				<p><input type="checkbox" name="manufacturers" id="checkbox-2">
-					<label for="checkbox-2">Mr Natty</label></p>
-				<p><input type="checkbox" name="manufacturers" id="checkbox-3" checked>
-					<label for="checkbox-3">Suavecito</label></p>
-				<p><input type="checkbox" name="manufacturers" id="checkbox-4">
-					<label for="checkbox-4">Malin+Goetz</label></p>
-				<p><input type="checkbox" name="manufacturers" id="checkbox-5">
-					<label for="checkbox-5">Murray’s</label></p>
-				<p><input type="checkbox" name="manufacturers" id="checkbox-6" checked>
-					<label for="checkbox-6">American Crew</label></p>
-				<h2 class="filter">Группы товаров:</h2>
-				<button type="submit">Показать</button>
+				<fieldset>
+					<legend>Производители: </legend>
+					<p><input type="checkbox" name="checkbox-1" id="checkbox-1" checked>
+						<label for="checkbox-1">Baxter of California</label></p>
+					<p><input type="checkbox" name="checkbox-2" id="checkbox-2">
+						<label for="checkbox-2">Mr Natty</label></p>
+					<p><input type="checkbox" name="checkbox-3" id="checkbox-3" checked>
+						<label for="checkbox-3">Suavecito</label></p>
+					<p><input type="checkbox" name="checkbox-4" id="checkbox-4">
+						<label for="checkbox-4">Malin+Goetz</label></p>
+					<p><input type="checkbox" name="checkbox-5" id="checkbox-5">
+						<label for="checkbox-5">Murray’s</label></p>
+					<p><input type="checkbox" name="checkbox-6" id="checkbox-6" checked>
+						<label for="checkbox-6">American Crew</label></p>
+				</fieldset>
+				<fieldset>
+					<legend>Группы товаров:</legend>
+					<p><input type="radio" name="products-group" valude="oils" id="oils"><label for="oils">Бритвенные принадлежности</label></p>
+					<p><input type="radio" name="products-group" valude="сare" id="сare"><label for="сare">Средства для ухода</label></p>
+					<p><input type="radio" name="products-group" valude="accessories" id="accessories"><label for="accessories">Аксессуары</label></p>
+					<button type="submit">Показать</button>
+				</fieldset>
 			</form>
 		</div>
 		<div class="products-content">
 			<ul class="products-list">
 				<li class="products-card">
-					<img src="img/product-img.jpg" alt="">
-					<p class="products-type">Набор для путешествий</p>
-					<p class="products-name">«Baxter of California»</p>
+					<img src="img/product-pic-1.jpg" alt="">
+					<div class="products-title">
+						<a href="#">
+							<span class="products-category">Набор для путешествий</span>
+							<span class="products-name">«Baxter of California»</span>
+						</a>
+					</div>
 					<div class="products-cost">
-						<p class="product-price">2900 Руб.</p>
+						<span class="product-price">2900 Руб.</span>
 						<a href="#" class="btn">Купить</a>
 					</div>
 				</li>
 				<li class="products-card">
-					<img src="img/product-img.jpg" alt="">
-					<p class="products-type">Набор для путешествий</p>
-					<p class="products-name">«Baxter of California»</p>
+					<img src="img/product-pic-2.jpg" alt="">
+					<div class="products-title">
+						<a href="#">
+							<span class="products-category">Набор для путешествий</span>
+							<span class="products-name">«Baxter of California»</span>
+						</a>
+					</div>
 					<div class="products-cost">
-						<p class="product-price">2900 Руб.</p>
+						<span class="product-price">2900 Руб.</span>
 						<a href="#" class="btn">Купить</a>
 					</div>
 				</li>
 				<li class="products-card">
-					<img src="img/product-img.jpg" alt="">
-					<p class="products-type">Набор для путешествий</p>
-					<p class="products-name">«Baxter of California»</p>
+					<img src="img/product-pic-3.jpg" alt="">
+					<div class="products-title">
+						<a href="#">
+							<span class="products-category">Набор для путешествий</span>
+							<span class="products-name">«Baxter of California»</span>
+						</a>
+					</div>
 					<div class="products-cost">
-						<p class="product-price">2900 Руб.</p>
+						<span class="product-price">2900 Руб.</span>
 						<a href="#" class="btn">Купить</a>
 					</div>
 				</li>
 				<li class="products-card">
-					<img src="img/product-img.jpg" alt="">
-					<p class="products-type">Набор для путешествий</p>
-					<p class="products-name">«Baxter of California»</p>
+					<img src="img/product-pic-4.jpg" alt="">
+					<div class="products-title">
+						<a href="#">
+							<span class="products-category">Набор для путешествий</span>
+							<span class="products-name">«Baxter of California»</span>
+						</a>
+					</div>
 					<div class="products-cost">
-						<p class="product-price">2900 Руб.</p>
+						<span class="product-price">2900 Руб.</span>
 						<a href="#" class="btn">Купить</a>
 					</div>
 				</li>
 				<li class="products-card">
-					<img src="img/product-img.jpg" alt="">
-					<p class="products-type">Набор для путешествий</p>
-					<p class="products-name">«Baxter of California»</p>
+					<img src="img/product-pic-5.jpg" alt="">
+					<div class="products-title">
+						<a href="#">
+							<span class="products-category">Набор для путешествий</span>
+							<span class="products-name">«Baxter of California»</span>
+						</a>
+					</div>
 					<div class="products-cost">
-						<p class="product-price">2900 Руб.</p>
+						<span class="product-price">2900 Руб.</span>
 						<a href="#" class="btn">Купить</a>
 					</div>
 				</li>
 				<li class="products-card">
-					<img src="img/product-img.jpg" alt="">
-					<p class="products-type">Набор для путешествий</p>
-					<p class="products-name">«Baxter of California»</p>
+					<img src="img/product-pic-6.jpg" alt="">
+					<div class="products-title">
+						<a href="#">
+							<span class="products-category">Набор для путешествий</span>
+							<span class="products-name">«Baxter of California»</span>
+						</a>
+						</div>
 					<div class="products-cost">
-						<p class="product-price">2900 Руб.</p>
+						<span class="product-price">2900 Руб.</span>
 						<a href="#" class="btn">Купить</a>
 					</div>
 				</li>
@@ -118,14 +150,14 @@
 		</div>
 	</main>
 	<footer class="main-footer">
-		<div class="container">
+		<div class="container clearfix">
 			<section class="footer-contacts">
 				БАРБЕРШОП «БОРОДИНСКИЙ» <br>
 				АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br>
 				<a href="#">КАК НАС НАЙТИ?</a><br>
 				ТЕЛЕФОН: +7 (495) 666-02-66
 			</section>
-			<section class="footer-socials">
+			<section class="footer-social">
 				<p>Давайте дружить</p>
 				<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
 				<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
