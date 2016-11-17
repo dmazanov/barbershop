@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Барбершоп "Бородинский"</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -23,7 +25,7 @@
 		</div>
 	</header>
 	<main class="container">
-		<div class="index-logo block">
+		<div class="index-logo">
 			<img src="img/index-logo.png" width="368" height="204" alt='Барбершоп "Бородинский"'>
 		</div>
 		<section class="features clearfix">
@@ -43,7 +45,7 @@
 		<div class="index-content clearfix">
 			<div class="index-content-left">
 				<h2 class="index-content-title">Новости</h2>
-				<ul class="news-review">
+				<ul class="news-preview">
 					<li>
 						<p>Нам на конец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
 						<time datetime="2016-01-11">11 января</time>
@@ -57,11 +59,13 @@
 			</div>
 			<div class="index-content-right">
 				<h2 class="index-content-title">Фотогалерея</h2>
-				<figure class="gallery-content">
-					<img src="img/photo-1.jpg" alt="">
-					<button class="btn gallery-prev">Назад</button>
+				<div class="gallery">
+					<figure class="gallery-content">
+						<img src="img/photo-1.jpg" alt="">
+					</figure>
+					<button class="btn gallery-prev" disabled>Назад</button>
 					<button class="btn gallery-next">Вперед</button>
-				</figure>
+				</div>
 			</div>
 		</div>
 		<div class="index-content clearfix">
