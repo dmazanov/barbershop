@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Барбершоп "Бородинский" - Магазин</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body class="page">
@@ -16,7 +18,7 @@
 					<li><a href="#">Информация</a></li>
 					<li><a href="#">Новости</a></li>
 					<li><a href="price.html">Прайс-лист</a></li>
-					<li><a href="shop.html">Магазин</a></li>
+					<li class="current"><a href="shop.html">Магазин</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
 			</nav>
@@ -33,7 +35,7 @@
 			<li><span>Средства для ухода</span></li>
 		</ul>
 		<div class="sidebar">
-			<form action="" method="get">
+			<form class="sort-form" action="" method="get">
 				<fieldset>
 					<legend>Производители: </legend>
 					<p><input type="checkbox" name="checkbox-1" id="checkbox-1" checked>
@@ -54,97 +56,109 @@
 					<p><input type="radio" name="products-group" valude="oils" id="oils"><label for="oils">Бритвенные принадлежности</label></p>
 					<p><input type="radio" name="products-group" valude="сare" id="сare"><label for="сare">Средства для ухода</label></p>
 					<p><input type="radio" name="products-group" valude="accessories" id="accessories"><label for="accessories">Аксессуары</label></p>
-					<button type="submit">Показать</button>
 				</fieldset>
+				<button class="btn" type="submit">Показать</button>
 			</form>
 		</div>
 		<div class="products-content">
 			<ul class="products-list">
 				<li class="products-card">
 					<img src="img/product-pic-1.jpg" alt="">
-					<div class="products-title">
-						<a href="#">
-							<span class="products-category">Набор для путешествий</span>
-							<span class="products-name">«Baxter of California»</span>
-						</a>
-					</div>
-					<div class="products-cost">
-						<span class="product-price">2900 Руб.</span>
-						<a href="#" class="btn">Купить</a>
+					<div class="products-card-body">
+						<div class="products-title">
+							<a href="#">
+								<span class="products-category">Набор для путешествий</span>
+								<span class="products-name">«Baxter of California»</span>
+							</a>
+						</div>
+						<div class="products-cost">
+							<span class="product-price">2900 Руб.</span>
+							<a href="#" class="btn">Купить</a>
+						</div>
 					</div>
 				</li>
 				<li class="products-card">
 					<img src="img/product-pic-2.jpg" alt="">
-					<div class="products-title">
-						<a href="#">
-							<span class="products-category">Набор для путешествий</span>
-							<span class="products-name">«Baxter of California»</span>
-						</a>
-					</div>
-					<div class="products-cost">
-						<span class="product-price">2900 Руб.</span>
-						<a href="#" class="btn">Купить</a>
+					<div class="products-card-body">
+						<div class="products-title">
+							<a href="#">
+								<span class="products-category">Набор для путешествий</span>
+								<span class="products-name">«Baxter of California»</span>
+							</a>
+						</div>
+						<div class="products-cost">
+							<span class="product-price">2900 Руб.</span>
+							<a href="#" class="btn">Купить</a>
+						</div>
 					</div>
 				</li>
 				<li class="products-card">
 					<img src="img/product-pic-3.jpg" alt="">
-					<div class="products-title">
-						<a href="#">
-							<span class="products-category">Набор для путешествий</span>
-							<span class="products-name">«Baxter of California»</span>
-						</a>
-					</div>
-					<div class="products-cost">
-						<span class="product-price">2900 Руб.</span>
-						<a href="#" class="btn">Купить</a>
+					<div class="products-card-body">
+						<div class="products-title">
+							<a href="#">
+								<span class="products-category">Набор для путешествий</span>
+								<span class="products-name">«Baxter of California»</span>
+							</a>
+						</div>
+						<div class="products-cost">
+							<span class="product-price">2900 Руб.</span>
+							<a href="#" class="btn">Купить</a>
+						</div>
 					</div>
 				</li>
 				<li class="products-card">
 					<img src="img/product-pic-4.jpg" alt="">
-					<div class="products-title">
-						<a href="#">
-							<span class="products-category">Набор для путешествий</span>
-							<span class="products-name">«Baxter of California»</span>
-						</a>
-					</div>
-					<div class="products-cost">
-						<span class="product-price">2900 Руб.</span>
-						<a href="#" class="btn">Купить</a>
+					<div class="products-card-body">
+						<div class="products-title">
+							<a href="#">
+								<span class="products-category">Набор для путешествий</span>
+								<span class="products-name">«Baxter of California»</span>
+							</a>
+						</div>
+						<div class="products-cost">
+							<span class="product-price">2900 Руб.</span>
+							<a href="#" class="btn">Купить</a>
+						</div>
 					</div>
 				</li>
 				<li class="products-card">
 					<img src="img/product-pic-5.jpg" alt="">
-					<div class="products-title">
-						<a href="#">
-							<span class="products-category">Набор для путешествий</span>
-							<span class="products-name">«Baxter of California»</span>
-						</a>
-					</div>
-					<div class="products-cost">
-						<span class="product-price">2900 Руб.</span>
-						<a href="#" class="btn">Купить</a>
+					<div class="products-card-body">
+						<div class="products-title">
+							<a href="#">
+								<span class="products-category">Набор для путешествий</span>
+								<span class="products-name">«Baxter of California»</span>
+							</a>
+						</div>
+						<div class="products-cost">
+							<span class="product-price">2900 Руб.</span>
+							<a href="#" class="btn">Купить</a>
+						</div>
 					</div>
 				</li>
 				<li class="products-card">
 					<img src="img/product-pic-6.jpg" alt="">
-					<div class="products-title">
-						<a href="#">
-							<span class="products-category">Набор для путешествий</span>
-							<span class="products-name">«Baxter of California»</span>
-						</a>
+					<div class="products-card-body">
+						<div class="products-title">
+							<a href="#">
+								<span class="products-category">Набор для путешествий</span>
+								<span class="products-name">«Baxter of California»</span>
+							</a>
+							</div>
+						<div class="products-cost">
+							<span class="product-price">2900 Руб.</span>
+							<a href="#" class="btn">Купить</a>
 						</div>
-					<div class="products-cost">
-						<span class="product-price">2900 Руб.</span>
-						<a href="#" class="btn">Купить</a>
 					</div>
 				</li>
 			</ul>
 			<nav class="product-page-navigation">
 				<ul class="pagination">
-					<li><a href="#" class="btn">1</a></li>
-					<li><a href="#" class="btn">2</a></li>
-					<li><a href="#" class="btn">3</a></li>
-					<li><a href="#" class="btn">4</a></li>
+					<li><a href="#" class="">1</a></li>
+					<li><a href="#" class="active">2</a></li>
+					<li><a href="#" class="">3</a></li>
+					<li><a href="#" class="">4</a></li>
 				</ul>
 		</nav>
 		</div>
