@@ -5,7 +5,7 @@ html, body {
 
 body {
 	/* background: #000000 url('../index1440x770.jpg')no-repeat 50% 3px; */
-	background: #000000 url('../shop1423.jpg')no-repeat 50% 0;
+	/* background: #000000 url('../shop1423.jpg')no-repeat 50% 0; */
 	min-width: 960px;
 	font-weight: 700;
 	font-size: 14px;
@@ -13,7 +13,7 @@ body {
 	font-family: "PT Sans Narrow", "Arial", sans-serif;
 	color: #ffffff;
 	text-transform: uppercase;
-	/* background: #000000 url("../img/body-bg.jpg") no-repeat center top; */
+	background: #000000 url("../img/body-bg.jpg") no-repeat center top;
 }
 
 .clearfix::after {
@@ -118,8 +118,7 @@ body {
 	width: 18px;
 	height: 18px;
 	background: url("../img/sprite.png") no-repeat;
-	 background-position: -5px -131px;
-	/*background-position: ;  01:19:00  создать sprite */
+	 background-position: -20px -266px;
 	opacity: 0.3;
 }
 
@@ -390,25 +389,23 @@ body {
 		background-color 0.5s;
 }
 
-.social-btn-vk {
-    background-position: 3px -170px;
-}
+.social-btn-vk { background-position: -12px -365px; }
 
-.social-btn-fb { background-position: 10px -26px; }
+.social-btn-fb { background-position: -4px -72px; }
 
-.social-btn-inst { background-position: 6px -90px; }
+.social-btn-inst { background-position: -9px -195px; }
 
 .social-btn:hover {
 	background-color: #ffffff;
 }
 
 .social-btn-vk:hover {
-	background-position: 3px -143px;
+	 background-position: -12px -308px;
 }
 
-.social-btn-fb:hover { background-position: 10px 6px; }
+.social-btn-fb:hover { background-position: -4px -10px; }
 
-.social-btn-inst:hover { background-position: 6px -58px; }
+.social-btn-inst:hover { background-position: -9px -134px; }
 
 .footer-copyright {
 	float:right;
