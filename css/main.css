@@ -34,6 +34,7 @@ body {
 }
 
 .main-header { 
+	min-height: 70px;
 	margin-bottom: 60px;
 	color: #ffffff;
 	background-color: #000000;
@@ -70,21 +71,18 @@ body {
 	background: #242424;
 }
 
-.main-navigation a:hover::after {
-	content: '';
-	height: 0;
-}
-
 .current a::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
-	width: calc(100% - 40px);
+	left: 20px;
+	right: 20px;
 	height: 4px;
-	margin: 0 auto;
 	background: #ffffff;
+}
+
+.main-navigation .current a:hover {
+	background: none;
 }
 
 .user-block {
@@ -429,7 +427,11 @@ body {
 /*---- Page Item ----*/
 .page {
 	color: #000000;
-	background:  #f8f5f2 url("../img/patern-white.jpg");
+	background: #f8f5f2 url("../img/patern-white.jpg") repeat;
+}
+
+.page .main-header {
+	margin-bottom: 55px;
 }
 
 .page-logo {
@@ -487,13 +489,15 @@ body {
 
 .breadcrumbs li:first-child::before {
 	content: none;
-	height: 0;
-	width: 0;
 }
 
 .breadcrumbs a {
 	color: #000000;
 	text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+	text-decoration: underline;
 }
 
 
@@ -621,35 +625,34 @@ body {
 /*----- Page Price ----- */
 .promo-slogan {
 	position: relative;
-	display: block;
-	width: 620px;
-	margin: 0 auto;
 	margin-bottom: 60px;
-	font-weight: 700;
-	font-size: 48px;
 	text-align: center;
 }
 
-.promo-slogan::before,
+.promo-slogan h2{
+	position: relative;
+	z-index: 2;
+	display: inline;
+	margin: 0;
+	padding: 0 25px;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	background: #f8f5f2 url("../img/patern-white.jpg") repeat;
+}
+
 .promo-slogan::after {
 	content: "";
 	position: absolute;
 	top: 0;
+	left: 0;
 	bottom: 0;
-	width: 160px;
+	z-index: 1;
+	width: 100%;
 	height: 2px;
 	margin: auto 0;
 	background: #000000;
 }
-
-.promo-slogan::before {
-	left: -160px;
-}
-
-.promo-slogan::after  {
-	right: -160px;
-}
-
 
 .row {
 	margin-bottom: 50px;
@@ -830,7 +833,10 @@ body {
 }
 
 .products-category,
-.products-name { display: block; font-size: 14px;}
+.products-name {
+	display: block; 
+	font-size: 14px;
+}
 
 .products-category {
 
@@ -889,4 +895,181 @@ body {
 .pagination a.active {
 	color: #000000;
 	background: #ffffff;
+}
+
+
+/*******************************
+				Popup window
+********************************/
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+	position: fixed;
+	top: 120px;
+	left: 50%;
+	z-index: 30;
+	display: none;
+	width: 300px;
+	margin-left: -230px;
+	padding: 50px 80px;
+	color: #000000;
+	background: #f8f3f0 url("../img/patern-white.jpg") repeat;
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-map {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 30;
+	display: none;
+	width: 766px;
+	height: 561px;
+	margin-top: -280px;
+	margin-left: -390px;
+	background: #e9e5dc url("../img/map.jpg") no-repeat;
+	border: 7px solid #ffffff;
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-close {
+	position: absolute;
+	top: 0;
+	right: -34px;
+	width: 22px;
+	height: 22px;
+	font-size: 0;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 2px;
+	width: 19px;
+	height: 3px;
+	background-color: #d0d0d0;
+	border-radius: 1px;
+}
+
+.modal-content-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+	transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.modal-content p {
+	margin: 0;
+	margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+	width: 236px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	padding-right: 40px;
+
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+
+	background-color: #f9f6f3;
+	border: 2px solid #000000;
+	outline: none;
+}
+
+.login-form input:focus {
+	border-color: #663d15;
+}
+
+.login-form input.icon-user {
+	background: url("../img/icon-user.png") no-repeat 270px center;
+}
+
+.login-form input.icon-password {
+	background: url("../img/icon-password.png") no-repeat 270px center;
+}
+
+.login-form .restore {
+	float: right;
+	color: #000000;
+}
+
+.login-form .btn{
+	width: 100%;
+	margin-top: 15px;
+}
+
+.login-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.login-checkbox {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.lobin-checkbox:hover {
+	color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 1px;
+	width: 15px;
+	height: 2px;
+	background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+	transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	transform: rotate(-45deg);
 }

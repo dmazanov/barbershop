@@ -11,7 +11,9 @@
 	<header class="main-header">
 		<div class="container clearfix">
 			<div class="page-logo">
-				<img src="img/page-logo.png" alt='Барбершоп "Бородинский"'>
+				<a href="index.html">
+					<img src="img/page-logo.png" alt='Барбершоп "Бородинский"'>
+				</a>
 			</div>
 			<nav class="main-navigation">
 				<ul>
@@ -34,7 +36,9 @@
 			<li><span>Прайс-лист</span></li>
 		</ul>
 		<div class="row clearfix">
-			<b class="promo-slogan">ИСТИННО МУЖСКАЯ КЛАССИКА</b>
+			<div class="promo-slogan">
+				<h2>ИСТИННО МУЖСКАЯ КЛАССИКА</h2>
+			</div>
 			<div class="promo-content">
 				<h2 class="promo-title">МЫ ИСПОЛЬЗУЕМ ТОЛЬКО <br>
 				ЛУЧШИЕ СРЕДСТВА:</h2>
@@ -84,5 +88,19 @@
 			</section>
 		</div>
 	</footer>
+	<div class="modal-content">
+		<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+		<h2 class="modal-content-title">Личный кабинет</h2>
+		<p>Введите свой логин и пароль</p>
+		<form action="" method="post" class="login-form">
+			<input type="text" name="login" class="icon-user" placeholder="Логин">
+			<input type="password" name="password" class="icon-password" placeholder="Пароль">
+			<label class="login-checkbox"><input type="checkbox" name="remeber">
+			<span class="checkbox-indicator"></span>Запомните меня</label>
+			<a href="#" class="restore">Я забыл пароль</a>
+			<button class="btn" type="submit">Войти</button>
+		</form>
+	</div>
+	<div class="modal-overlay"></div>
 </body>
 </html>
