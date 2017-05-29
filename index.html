@@ -8,21 +8,25 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<header class="main-header">
-		<div class="container clearfix">
-			<nav class="main-navigation">
-				<ul>
-					<li><a href="#">Информация</a></li>
-					<li><a href="#">Новости</a></li>
-					<li><a href="price.html">Прайс-лист</a></li>
-					<li><a href="shop.html">Магазин</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</nav>
-			<div class="user-block">
-				<a href="#" class="login">Вход</a>
-			</div>
+	<header class="page-header">
+		<h1 class="visually-hidden">Брабершоп &#171;Бородинский&#187; - истинно мужская классика</h1>
+		<div class="page-header__logo">
+			<img src="img/logo.svg" width="370px" height="150px" alt="Барбершоп &#171;Бородинский&#187; ">
 		</div>
+		<nav class="main-nav  main-nav--closed main-nav--nojs">
+			<button class="main-nav__toggle" type="button">Открыть меню</button>
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list">
+					<li class="main-nav__item  main-nav__item--active"><a>Главная</a></li>
+					<li class="main-nav__item"><a href="#">Наши работы</a></li>
+					<li class="main-nav__item"><a href="#">Записаться</a></li>
+					<li class="main-nav__item"><a href="#">Контакты</a></li>
+				</ul>
+				<ul class="main-nav__user-list">
+					<li class="main-nav__user-item"><a href="#" class="main-nav__user-login" title="Войти">Вход</a></li>
+				</ul>
+			</div>
+		</nav>
 	</header>
 	<main class="container">
 		<div class="index-logo">
