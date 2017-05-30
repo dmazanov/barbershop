@@ -99,28 +99,66 @@
 					<p>Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
 				</li>
 			</ul>
-			<a href="#" class="news__to-all btn">Показать все</a>
+			<a href="#" class="news__to-all  btn">Показать все</a>
 		</div>
 	</section>
-
-	<footer class="main-footer">
-		<div class="container clearfix">
-			<section class="footer-contacts">
-				Барбершоп "Бородинский" <br>
-				Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
-				<a href="#">Как нас найти?</a><br>
-				Телефон: +7 (812) 666-02-66
-			</section>
-			<section class="footer-social">
-				<p>Давайте дружить!</p>
-				<a href="#" class="social-btn social-btn-vk">Вконтакте</a>
-				<a href="#" class="social-btn social-btn-fb">Фейсбук</a>
-				<a href="#" class="social-btn social-btn-inst">Инстаграм</a>
-			</section>
-			<section class="footer-copyright">
-				<p>Разработано:</p>
-				<a href="#" class="btn">HTML Academy</a>
-			</section>
+	<section class="reviews">
+		<div class="reviews__inner  slider">
+			<h2 class="reviews__title">Отзыв о нас</h2>
+			<a href="#" class="reviews__write  btn">Оставить свой</a>
+			<input type="radio" class="slider__input" name="reviews" id="reviews-input-1" checked>
+			<input type="radio" class="slider__input" name="reviews" id="reviews-input-2">
+			<input type="radio" class="slider__input" name="reviews" id="reviews-input-3">
+			<div class="reviews__list">
+				<blockquote class="reviews__item  slider__item">
+					<div class="reviews__author-foto">
+						<img src="img/pic-travis.jpg" width="50" height="33" alt="Фото Тревиса Баркера">
+					</div>
+					<cite class="reviews__author-name">Тревис Баркер</cite>
+					<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+				</blockquote>
+				<blockquote class="reviews__item  slider__item">
+					<div class="reviews__author-foto">
+						<img src="img/pic-travis.jpg" width="50" height="33" alt="Фото Тревиса Баркера">
+					</div>
+					<cite class="reviews__author-name">Тревис Баркер</cite>
+					<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+				</blockquote>
+				<blockquote class="reviews__item  slider__item">
+					<div class="reviews__author-foto">
+						<img src="img/pic-travis.jpg" width="50" height="33" alt="Фото Тревиса Баркера">
+					</div>
+					<cite class="reviews__author-name">Тревис Баркер</cite>
+					<p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+				</blockquote>
+				<button class="reviews__prev" type="button">Предыдущий отзыв</button>
+				<button class="reviews__next" type="button">Следующий отзыв</button>
+			</div>
+			<div class="reviews__toggles slider__toggles">
+				<label class="slider__toggle" for="reviews-input-1">1</label>
+				<label class="slider__toggle" for="reviews-input-2">2</label>
+				<label class="slider__toggle" for="reviews-input-3">3</label>
+			</div>
+		</div>
+	</section>
+	<footer class="page-footer">
+		<div class="page-footer__inner">
+			<p class="page-footer__contacts">
+				<b>Брабершоп &#171;Бородинский&#187;</b><br>
+				г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+				<a href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:</span>+7(812)555-66-66</a>
+			</p>
+			<p class="page-footer__social">
+				<span class="social-list">
+					<a href="#" class="social-link social-link--vk">Мы в Вконтакте</a>
+					<a href="" class="social-link social-link--fb">Мы в Фейсбук</a>
+					<a href="" class="social-link social-link--in">Мы в Инстаграм</a>
+				</span>
+			</p>
+			<p class="page-footer__copyright">
+				Разработано:
+				<a href="#" class="btn page-footer__copyright-link">HTML Academy</a>
+			</p>
 		</div>
 	</footer>
 	<div class="modal-content">
