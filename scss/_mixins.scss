@@ -1,0 +1,48 @@
+@mixin clearfix {
+	&::after {
+		content: '';
+
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin container {
+	width: 320px;
+	margin: 0 auto;
+
+	@media (min-width: 768px) {
+		width: 640px;
+	}
+
+	@media (min-width: 1200px) {
+		width: 960px;
+	}
+}
+
+@mixin container-fluid {
+	width: auto;
+
+	@media (min-width: 768px) {
+		width: 84%; /* 640px / 768px ~= 84% */
+		max-width: 960px; /* 960px / .84 ~= 1142px (центровка начнётся чуть раньше 1200px) */
+		margin: 0 auto;
+	}
+}
+
+
+@mixin mock($height: 100px, $bg: rgba(255, 255, 255, 0.1), $wavesOpacity: 0.5) {
+	background-color: $bg;
+	background-image:
+				linear-gradient(135deg, rgba(0, 0, 0, $wavesOpacity) 25%, transparent 25%),
+				linear-gradient(225deg, rgba(0, 0, 0, $wavesOpacity) 25%, transparent 25%),
+				linear-gradient(45deg, rgba(0, 0, 0, $wavesOpacity) 25%, transparent 25%),
+				linear-gradient(315deg, rgba(0, 0, 0, $wavesOpacity) 25%, transparent 25%);
+	background-position:
+				25px 0,
+				25px 0,
+				0 0,
+				0 0;
+	background-size: 50px 50px;
+	background-repeat: repeat;
+}
