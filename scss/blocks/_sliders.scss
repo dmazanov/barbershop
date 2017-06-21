@@ -1,0 +1,19 @@
+.slider__toggles {
+	font-size: 0;
+}
+
+.slider__toggle {
+	display: inline-block;
+	margin-right: 23px;
+	width: 6px;
+	height: 6px;
+	border: 1px solid #cfcfcf;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+#advantages-input-1:checked~.slider__toggles label[for=advantages-input-1],
+#advantages-input-2:checked~.slider__toggles label[for=advantages-input-2],
+#advantages-input-3:checked~.slider__toggles label[for=advantages-input-3] {
+	background-color: #fff;
+}
