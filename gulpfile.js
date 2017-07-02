@@ -5,7 +5,8 @@ var gulp = require("gulp"),
 		autoprefixer = require("autoprefixer"),
 		mqpacker = require("css-mqpacker"), // склеивает все media-quires в одно место
 		minify = require("gulp-csso"),
-		rename = require("gulp-rename"); // переименовывает файлы
+		rename = require("gulp-rename"), // переименовывает файлы
+		imagemin = require("gulp-imagemin"); // оптимизация изображений
 
 // Static Server + watching scss/html files
 gulp.task('browser-sync', ['sass'], function() {
@@ -40,6 +41,15 @@ gulp.task('sass', function() {
 		.pipe(rename("main.min.css"))
 		.pipe(gulp.dest("css"))
 		.pipe(browserSync.stream());
+});
+
+gulp.task('images', function() {
+	return gulp.src("img/**/*.{png,jpg,gif}")
+		.pipe(imagemin([
+				imagemin.optipng({optimizationLevel: 3}),
+				imagemin.jpegtran({progressive: true})
+			]))
+		.pipe(gulp.dest("img"));
 });
 
 gulp.task ('default', ['browser-sync']);
