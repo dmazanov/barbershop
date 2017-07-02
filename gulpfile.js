@@ -2,8 +2,10 @@ var gulp = require("gulp"),
 		browserSync = require("browser-sync").create(),
 		sass = require("gulp-sass"),
 		postcss = require("gulp-postcss"),
-		autoprefixer = require("autoprefixer");
-
+		autoprefixer = require("autoprefixer"),
+		mqpacker = require("css-mqpacker"), // склеивает все media-quires в одно место
+		minify = require("gulp-csso"),
+		rename = require("gulp-rename"); // переименовывает файлы
 
 // Static Server + watching scss/html files
 gulp.task('browser-sync', ['sass'], function() {
@@ -28,8 +30,14 @@ gulp.task('sass', function() {
 					"last 2 Firefox versions",
 					"last 2 Opera versions",
 					"last 2 Edge versions"
-				]})
+				]}),
+			mqpacker({
+				sort: true
+			})
 		]))
+		.pipe(gulp.dest("css"))
+		.pipe(minify())
+		.pipe(rename("main.min.css"))
 		.pipe(gulp.dest("css"))
 		.pipe(browserSync.stream());
 });
