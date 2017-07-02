@@ -8,7 +8,8 @@ var gulp = require("gulp"),
 		rename = require("gulp-rename"), // переименовывает файлы
 		imagemin = require("gulp-imagemin"), // оптимизация изображений
 		svgmin = require("gulp-svgmin"), // минификация svg файла
-		svgstore = require("gulp-svgstore"); // svg спрайт
+		svgstore = require("gulp-svgstore"), // svg спрайт
+		run = require("run-sequence");
 
 // Static Server + watching scss/html files
 gulp.task('browser-sync', ['sass'], function() {
@@ -66,3 +67,27 @@ gulp.task('symbols', function() {
 });
 
 gulp.task ('default', ['browser-sync']);
+
+
+
+//====================================================
+//====================================================
+//====================================================
+//=============== BUILD ==============================
+
+//Копирование файлов
+gulp.task('copy', function() {
+	return gulp.src([
+			"fonts/**/*.{woff,woff2}",
+			"img/**",
+			"js/**",
+			"*.html"
+		], {
+			base: '.'
+		})
+		.pipe(gulp.dest("build"));
+});
+
+gulp.task("build", function() {
+	run('sass', 'images', 'symbols', fn);
+});
